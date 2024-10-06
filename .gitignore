@@ -1,0 +1,23 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SGC_PORTFOLIO/bin/Debug/net6.0/
+/.vs/SGC_PORTFOLIO
+/SGC_PORTFOLIO/obj/Debug/net6.0/ref
+/SGC_PORTFOLIO/obj/Debug/net6.0/refint
+
+/SGC_PORTFOLIO/obj/Debug/net6.0/staticwebassets.build.json
+/SGC_PORTFOLIO/obj/Debug/net6.0/SGC_PORTFOLIO.sourcelink.json
+
+/SGC_PORTFOLIO/bin/Debug/
+
+
+/SGC_PORTFOLIO/obj/Debug/net6.0/staticwebassets
+/SGC_PORTFOLIO/obj/Debug/net6.0/scopedcss
+
+/SGC_PORTFOLIO/obj/Debug/net6.0/*
+
+
+/SGC_PORTFOLIO/obj/Debug/net6.0/SGC_PORTFOLIO.AssemblyInfoInputs.cache
+/SGC_PORTFOLIO/obj/Debug/net6.0/SGC_PORTFOLIO.AssemblyInfo.cs
