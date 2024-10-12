@@ -1,0 +1,46 @@
+﻿@model IEnumerable<SGC_PORTFOLIO.Models.BlogEntry>
+
+<div class="blog-header">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SGC PORTFOLIO</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Blog" asp-action="Index">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="blog-content">
+    <h1>Blog Entries</h1>
+
+    @if (Model != null && Model.Any())
+    {
+        <ul class="list-group">
+            @foreach (var blogEntry in Model)
+            {
+                <li class="list-group-item mb-3 blog-entry">
+                    <h2 class="card-title">
+                        <a href="@Url.Action("Details", "Blog", new { title = blogEntry.Title })">@blogEntry.Title</a>
+                    </h2>
+                    <p class="card-text">@blogEntry.Summary</p>
+                    <p class="card-text"><small class="text-muted">@blogEntry.CreatedAt.ToString("g")</small></p>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No blog entries available.</p>
+    }
+</div>

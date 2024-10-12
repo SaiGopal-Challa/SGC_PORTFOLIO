@@ -1,0 +1,39 @@
+﻿/* Custom styles for the blog pages */
+.blog-header {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 50px;
+}
+
+    .blog-header .navbar {
+        margin-bottom: 0;
+    }
+
+.blog-content {
+    margin-top: 20px; /* Add margin to create space between header and content */
+}
+
+.blog-entry {
+    margin-bottom: 20px;
+}
+
+    .blog-entry h2 {
+        font-size: 1.5rem;
+    }
+
+    .blog-entry p {
+        font-size: 1rem;
+    }
+
+    .blog-entry small {
+        color: #6c757d;
+    }
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}

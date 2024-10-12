@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\saigo\OneDrive\Desktop\SGC_PORTFOLIO\SGC_PORTFOLIO
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/saigo/OneDrive/Desktop/SGC_PORTFOLIO/SGC_PORTFOLIO/Views/Blog/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/saigo/OneDrive/Desktop/SGC_PORTFOLIO/SGC_PORTFOLIO/Views/Blog/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/saigo/OneDrive/Desktop/SGC_PORTFOLIO/SGC_PORTFOLIO/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
