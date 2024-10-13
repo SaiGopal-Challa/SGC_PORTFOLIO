@@ -233,6 +233,169 @@ document.addEventListener('DOMContentLoaded', function () {
     // closeNavList()
     const links = document.getElementsByClassName("nav-link");
     for (const link of links) {
+        link.addEventListener('click', closeNavList);
+    }
+
+    // openEduExp()
+    const credButton = document.getElementById('credentials-button');
+    try {
+        credButton.addEventListener('click', openEduExp);
+    } catch { }
+
+    // openSkills()
+    const moreButton = document.getElementById('more-skills');
+    try {
+        moreButton.addEventListener('click', openSkills);
+    } catch { }
+
+    // toggleExpandText()
+    const expandButtons = document.getElementsByClassName('expand');
+    for (const btn of expandButtons) {
+        btn.addEventListener('click', toggleExpandText);
+    }
+
+    // addSkillColors() + removeSkillColors()
+    const projects = document.getElementsByClassName('project');
+    for (const project of projects) {
+        project.addEventListener('mouseover', addSkillColors);
+        project.addEventListener('mouseout', removeSkillColors);
+    }
+
+    // animateScroll()
+    window.addEventListener('scroll', animateScroll);
+    window.addEventListener('resize', animateScroll);
+    animateScroll();
+    const expandbtns = document.getElementsByClassName('expand');
+    for (const btn of expandbtns) {
+        btn.addEventListener('click', animateScroll);
+    }
+
+    // animateBackgroundAndHeadshot()
+    window.addEventListener('resize', animateBackgroundAndHeadshot);
+    window.addEventListener('mousemove', animateBackgroundAndHeadshot);
+
+    // toggleDarkMode()
+    toggleBtn = document.getElementById('moon-btn');
+    toggleBtn.addEventListener('click', toggleDarkMode);
+    moonBtn = document.getElementById('moon-btn');
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        if (!moonBtn.checked) {
+            moonBtn.click();
+        }
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        if (event.matches) {
+            if (!moonBtn.checked) {
+                moonBtn.click();
+            }
+        } else {
+            if (moonBtn.checked) {
+                moonBtn.click();
+            }
+        }
+    });
+
+    // syncDarkMode()
+    window.addEventListener('DOMContentLoaded', syncDarkMode);
+
+    // Skill hover functionality for proficiency bars
+    document.querySelectorAll('.skill-container').forEach(container => {
+        const proficiencyBar = container.querySelector('.proficiency-bar');
+
+        // Mouse enter event
+        container.addEventListener('mouseenter', () => {
+            const percentage = proficiencyBar.getAttribute('data-percentage');
+            proficiencyBar.style.width = `${percentage}%`; // Set the width dynamically
+        });
+
+        // Mouse leave event
+        container.addEventListener('mouseleave', () => {
+            proficiencyBar.style.width = '0%'; // Reset width when not hovering
+        });
+    });
+
+    /*// Add showPopup functionality for project containers
+    const moreButtons = document.querySelectorAll('.more-btn');
+    moreButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            showPopup(button);
+        });
+    });*/
+});
+    // Function to show the project details in a pop-up
+// Function to show the project details in a pop-up
+// Function to show the project details in a pop-up
+function showPopup(button) {
+    // Check if a popup is already open
+    let existingPopup = document.querySelector('.popup-container');
+    if (existingPopup) {
+        // If a popup is already open, remove it first
+        document.body.removeChild(existingPopup);
+    }
+
+    // Create a popup container
+    const popupContainer = document.createElement('div');
+    const popupContent = document.createElement('div');
+    const closeButton = document.createElement('button');
+
+    // Set classes for styling
+    popupContainer.className = 'popup-container';
+    popupContent.className = 'popup-content';
+    closeButton.className = 'popup-close';
+    closeButton.innerHTML = '&times;'; // Close button
+
+    // Append close button
+    popupContent.appendChild(closeButton);
+
+    // Clone the project details for display in the popup
+    const projectClone = button.closest('.project').cloneNode(true);
+    projectClone.querySelector('.more-text').style.display = 'block'; // Show full text
+    projectClone.querySelector('.limited-text').style.display = 'none'; // Hide limited text
+
+    // Remove "Show More" button from cloned project
+    const showMoreBtn = projectClone.querySelector('.more-btn');
+    if (showMoreBtn) {
+        showMoreBtn.remove(); // Check if the button exists before trying to remove it
+    }
+
+    popupContent.appendChild(projectClone);
+    popupContainer.appendChild(popupContent);
+    document.body.appendChild(popupContainer);
+
+    // Display popup
+    popupContainer.classList.add('active');
+
+    // Close the popup when close button is clicked
+    closeButton.addEventListener('click', function () {
+        document.body.removeChild(popupContainer);
+    });
+
+    // Close popup when clicking outside of content
+    popupContainer.addEventListener('click', function (event) {
+        if (event.target === popupContainer) {
+            document.body.removeChild(popupContainer);
+        }
+    });
+}
+
+// Add click event to project containers
+const projects = document.querySelectorAll('.project');
+projects.forEach(project => {
+    project.addEventListener('click', function (event) {
+        // Prevent clicks on the close button from firing the project click event
+        showPopup(this); // Call showPopup on any click inside the project container
+    });
+});
+
+
+
+
+
+/*document.addEventListener('DOMContentLoaded', function () {
+    // closeNavList()
+    const links = document.getElementsByClassName("nav-link");
+    for (const link of links) {
         link.addEventListener('click', closeNavList)
     }
 
@@ -303,4 +466,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // syncDarkMode()
     window.addEventListener('DOMContentLoaded', syncDarkMode);
-});
+
+    // Skill hover functionality for proficiency bars
+    document.querySelectorAll('.skill-container').forEach(container => {
+        const proficiencyBar = container.querySelector('.proficiency-bar');
+
+        // Mouse enter event
+        container.addEventListener('mouseenter', () => {
+            const percentage = proficiencyBar.getAttribute('data-percentage');
+            proficiencyBar.style.width = `${percentage}%`; // Set the width dynamically
+        });
+
+        // Mouse leave event
+        container.addEventListener('mouseleave', () => {
+            proficiencyBar.style.width = '0%'; // Reset width when not hovering
+        });
+    });
+});*/
+

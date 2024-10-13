@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SGC_PORTFOLIO.Services;
+using SGC_PORTFOLIO.Models;
+using System.Linq;
 
 namespace SGC_PORTFOLIO.Controllers
 {
@@ -7,9 +9,9 @@ namespace SGC_PORTFOLIO.Controllers
     {
         private readonly BlogService _blogService;
 
-        public BlogController()
+        public BlogController(BlogService blogService)
         {
-            _blogService = new BlogService();
+            _blogService = blogService;
         }
 
         public IActionResult Index()
@@ -20,12 +22,19 @@ namespace SGC_PORTFOLIO.Controllers
 
         public IActionResult Details(string title)
         {
+            if (string.IsNullOrEmpty(title))
+            {
+                return BadRequest("Blog title is required.");
+            }
+
             var blogEntries = _blogService.GetBlogEntries();
-            var blogEntry = blogEntries.FirstOrDefault(b => b.Title == title);
+            var blogEntry = blogEntries.FirstOrDefault(b => string.Equals(b.Title, title, System.StringComparison.OrdinalIgnoreCase));
+
             if (blogEntry == null)
             {
-                return NotFound();
+                return NotFound($"Blog entry with title '{title}' not found.");
             }
+
             return View(blogEntry);
         }
     }

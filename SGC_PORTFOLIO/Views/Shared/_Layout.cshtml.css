@@ -5,10 +5,12 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  background-color:burlywood;
 }
 
 a {
   color: #0077cc;
+  background-color:burlywood;
 }
 
 .btn-primary {

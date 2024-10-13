@@ -17,12 +17,14 @@ body {
     margin: 0;
     background-color: #f2f4f7;
     font-family: 'Encode Sans', sans-serif;
+    
 }
 
 #privacy-page {
     background-color: white;
     width: 100vw;
     padding: 30px;
+    padding-top: 70px;
 }
 
 .container {
@@ -149,24 +151,49 @@ img {
     justify-content: center;
     align-items: center;
     width: 35vw;
-    height: 450px;
+    height: 500px;
 }
 
 #intro-left {
     background-color: #5E6FEE;
-    box-shadow: -5px 5px 10px rgba(249, 231, 137);
+    box-shadow: -5px -5px 10px rgba(249, 231, 137);
     justify-content: flex-end;
-    margin-top: 20px;
+    margin-top: 35px;
+    position: relative; /* Required for positioning */
+    animation: slideDown 1.5s ease forwards; /* Call animation on load */
+    animation-delay: 0s; /* Delay to start after 0.4 seconds */
 }
 
 #intro-right {
     align-items: flex-start;
     padding: 30px;
     background-color: #F3F4F7;
-    box-shadow: 5px -5px 10px rgba(173, 130, 228);
+    box-shadow: 5px 5px 10px rgba(173, 130, 228);
     text-align: left;
-    transition: opacity 0.5s 0.3s, transform 0.5s 0.3s;
-    margin-top: 20px;
+    margin-top: 35px;
+    position: relative; /* Required for positioning */
+    animation: slideUp 1.5s ease forwards; /* Call animation on load */
+    animation-delay: 0s; /* Delay to start after 0.4 seconds */
+}
+
+/* Keyframes for animations */
+@keyframes slideDown {
+    0% {
+        transform:  translateY(-200px); /* Start position */
+    }
+
+    100% {
+        transform:  translateY(0); /* End position */
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(200px); /* Start position */
+    }
+
+    100% {
+        transform: translateY(0); /* End position */
+    }
 }
 
 #headshot-content {
@@ -206,11 +233,12 @@ img {
 #social-buttons {
     z-index: 9998;
     display: flex;
+
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #82E4B7;
+    background-color: #F3F4F7;
 }
 
 .social-img {
@@ -542,7 +570,8 @@ h1 {
 }
 
 .project {
-    height: 500px;
+    min-height:500px;
+    height: auto;
     margin-left: 30px;
     padding: 30px;
     margin-top: 30px;
@@ -559,9 +588,10 @@ h1 {
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: max(100%, 275px) auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
-#connexion {
+/*#connexion {
     background-image: url('/images/connexion-bottom.png');
     transition: ease outline 0.3s, opacity 0.5s 0.3s, transform 0.5s 0.3s;
 }
@@ -575,14 +605,106 @@ h1 {
         color: white;
         background-color: #5071FB;
     }
-
+*/
 .project:hover {
     outline-width: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
 
     .project:hover .text .subheader {
         color: #F7D201;
     }
+
+/*adding more and popup effect for projects*/
+/* Show More button styles */
+.more-btn {
+    display: block;
+    background-color: #4CAF50; /* Button color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px; /* Margin for spacing */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute;
+    top: -15px; /* Position it above the project */
+    right: 10px; /* Position it to the right */
+}
+
+    .more-btn:hover {
+        background-color: #45a049; /* Darker shade on hover */
+    }
+/* Styles for Popup Effect */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    backdrop-filter: blur(10px); /* Background blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top */
+    visibility: hidden; /* Hidden by default */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+    /* When popup is active, make it visible */
+    .popup-container.active {
+        visibility: visible;
+        opacity: 1;
+    }
+.popup-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 90vw; /* Set a maximum width */
+    max-height: 90vh; /* Ensure popup doesn't overflow the screen */
+    overflow-y: auto; /* Scroll if content is too large */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10000; /* Make sure content is above blurred background */
+}
+
+    /* Ensure text elements have a bottom margin */
+    .popup-content h5,
+    .popup-content h4,
+    .popup-content h6,
+    .popup-content p {
+        margin-bottom: 10px;
+    }
+/* Close button for the popup */
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+    .popup-close:hover {
+        color: #ff0000;
+    }
+
+    /* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .project {
+        flex: 1 1 100%; /* Make projects take full width on smaller screens */
+    }
+    .popup-content {
+        width: 95%; /* Responsive width for popup */
+        max-width: none; /* Remove max width on small screens */
+    }
+}
+
+/*end of adding for project popup*/
 
 #button-div {
     width: 100%;
@@ -625,13 +747,83 @@ h1 {
     min-width: 280px;
 }
 
+.skill-container {
+    position: relative; /* Position relative to manage child absolute positioning */
+    text-align: center; /* Center align text */
+}
+
 .skill-icon {
     transition: ease filter .3s;
+}
+.skill-name {
+    display: block; /* Each skill name below the icon */
+    margin-top: 5px; /* Space between icon and name */
+    font-size: 14px; /* Font size for skill name */
 }
 
     .skill-icon.selected {
         filter: brightness(0) saturate(100%) invert(68%) sepia(99%) saturate(595%) hue-rotate(4deg) brightness(103%) contrast(99%);
     }
+
+.proficiency-hover {
+    display: none; /* Hidden by default */
+    position: absolute;
+    bottom: 100%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ddd; /* Grey background */
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.proficiency-text {
+    display: block;
+    font-size: 12px;
+    color: black;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.proficiency-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.proficiency-bar-bg {
+    background-color: white;
+    width: 100px;
+    height: 10px;
+    border: 1px solid #333; /* Dark border around the white bar */
+    border-radius: 5px;
+    position: relative;
+}
+
+.proficiency-bar {
+    background-color: #4CAF50; /* Green bar */
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease; /* Smooth transition */
+}
+
+.proficiency-percent {
+    font-size: 12px;
+    color: black;
+    margin-left: 5px;
+}
+
+/* Hover effect for showing proficiency */
+.skill-container:hover .proficiency-hover {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.skill-container:hover .proficiency-bar {
+    width: attr(data-percentage)%; /* Use data-percentage attribute for width */
+}
 
 /* Contact */
 #contact {

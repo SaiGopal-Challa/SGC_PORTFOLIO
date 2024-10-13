@@ -7,7 +7,7 @@ Content
 ContentEnd
 
 Picture
-/BlogImages/2ndblogtest_1.png
+BlogImages/2ndblogtest_1.png
 PictureEnd
 
 Content

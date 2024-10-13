@@ -20,7 +20,7 @@ namespace SGC_PORTFOLIO.Services
                 {
                     Title = fileName,
                     Summary = sections.Length > 0 ? sections[0] : string.Empty,
-                    Content = sections.Length > 1 ? sections[1] : string.Empty,
+                    //Content = sections.Length > 1 ? sections[1] : string.Empty,
                     CreatedAt = File.GetCreationTime(filePath)
                 };
 
