@@ -79,6 +79,12 @@ function addSkillColors(event) {
             skillElement.classList.add("selected");
         }
     }
+    if (project.id === 'BlogEngineSGC') {
+        for (skill of ['dotnet', 'bootstrap', 'html5', 'css3', 'javascript', 'json', 'redis', 'oraclesql']) {
+            skillElement = document.getElementById(skill);
+            skillElement.classList.add("selected");
+        }
+    }
     if (project.id === 'AutomatedAlgoTradingApp') {
         for (skill of ['python', 'pandas', 'html5', 'css3', 'javascript', 'json', 'redis', 'oraclesql']) {
             skillElement = document.getElementById(skill);
