@@ -91,6 +91,7 @@ function addSkillColors(event) {
             skillElement.classList.add("selected");
         }
     }
+    // need to add skills for the rest of the projects 
 }
 
 /**
