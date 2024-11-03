@@ -8,9 +8,15 @@
         public DateTime CreatedAt { get; set; }
     }
 
-    public class ContentSection
+    public class ContentSection_old
     {
         public string Text { get; set; }
         public string ImagePath { get; set; }
+    }
+
+    public class ContentSection
+    {
+        public string Text { get; set; }
+        public List<string> ImagePaths { get; set; } = new List<string>(); // Now supports multiple images per section
     }
 }

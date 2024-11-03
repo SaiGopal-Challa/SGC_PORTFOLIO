@@ -1,9 +1,0 @@
-Summary
-This is dummy entry.
-SummaryEnd
-
-Content
-This is dummy text Content, nothing to be added in this section.
-But don't forget to add the summary in the summary section.
-And don't forget to add the content in the content section.
-ContentEnd

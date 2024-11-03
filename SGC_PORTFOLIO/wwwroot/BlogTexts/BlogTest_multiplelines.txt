@@ -1,0 +1,33 @@
+Summary
+nothingagain
+SummaryEnd
+
+Content
+----
+adding and testing
+ContentEnd
+
+Picture
+BlogImages/2ndblogtest_1.png
+PictureEnd
+
+Content
+2nd content 
+
+abc
+ContentEnd
+
+Picture
+BlogImages/2ndblogtest_1.png
+PictureEnd
+
+Content
+----
+adding and testing
+ContentEnd
+
+
+Content
+----
+ending
+ContentEnd

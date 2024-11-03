@@ -8,18 +8,25 @@
         <div id="bg-div"></div>
         <div id="intro-content">
             <div id="intro-left" class="animate-scroll intro-half">
+                @* <div id="slideshow-container">
+                    <div class="slideshow-image" id="slide-1"> <img src="images/headshot-bw.jpeg" alt="Image 1" /> </div>
+                    <div class="slideshow-image" id="slide-2"> <img src="images/headshot-bw-123.jfif" alt="Image 2" /> </div>
+                    <div class="slideshow-image" id="slide-3"> <img src="images/headshot-color.jpeg" alt="Image 3" /> </div>
+                    <!-- Add more images as needed -->
+                    <div class="slideshow-image" id="slide-20"> <img src="images/headshot-color-123.jfif" alt="Image 20" /> </div>
+                </div> *@
                 <div id="headshot-content">
                     <div id="headshots">
                         <picture>
-                            <source srcset="images/headshot-bw.jfif" type="image/jfif">
-                            <img id="headshot-bw" class="headshot" src="/images/headshot-bw.jfif" alt="black and white headshot of gopal challa" width="512" />
+                            <source srcset="images/headshot-bw.jpeg" type="image/jpeg">
+                            <img id="headshot-bw" class="headshot" src="/images/headshot-bw.jpeg" alt="black and white headshot of gopal challa" width="1000" />
                         </picture>
                         <picture>
-                            <source srcset="images/headshot-color.jfif" type="image/jfif">
-                            <img id="headshot-color" class="headshot crop" src="/images/headshot-color.jfif" alt="color headshot of gopal challa" width="512" />
+                            <source srcset="images/headshot-color.jpeg" type="image/jpeg">
+                            <img id="headshot-color" class="headshot crop" src="/images/headshot-color.jpeg" alt="color headshot of gopal challa" width="1000" />
                         </picture>
                     </div>
-                </div>
+                </div> 
                 <div id="social-buttons">
                     <a id="in-btn" class="btn btn-primary social" target="_blank" href="https://www.linkedin.com/in/saigopal-challa/"><img class="social-img" src="/images/in-icon.png" alt="linkedin icon" width="64"/></a>
                     @*<a id="h-btn"class="btn btn-primary social" target="_blank" href="https://app.joinhandshake.com/"><img class="social-img" src="/images/h-icon.png" alt="handshake icon"width="64"/></a>*@
@@ -272,13 +279,13 @@
                         <div class="text" onclick="showPopup(this)">
                             <h5 class="text date">March 2023 - Present</h5>
                             <h4 class="text header">AndroidApplications</h4>
-                            <h6 class="text subheader">Android | HTML | CSS | TypeScript | Java | Bootstrap | MVVC | Photoshop</h6>
+                            <h6 class="text subheader">Android | HTML | CSS | TypeScript | Java | Bootstrap | MVVM | Photoshop</h6>
                             <p class="limited-text">
                                 Developed and published various android applications. Camera&Gallery app, Calender app with To-Do and Reminder functionalities, 2048 Game app.
                             </p>
                             <p class="more-text" style="display: none;">
                                 Built Camera&Gallery app, Calender app with To-Do and Reminder functionalities and 2048 Game applications using Android Studio to hone my skills. These have been published on google playstore. 
-
+                                Built using Android SDK, Java and following Model View View Model architecture.
                                 Links for these applications are on a seperate page on this website, please click below to navigate.
                             </p>
                         </div>
@@ -288,7 +295,7 @@
                         </div>
                     </div>
 
-                    <div class="project animate-scroll" id="AutomatedAlgoTradingApp">
+                    @* <div class="project animate-scroll" id="AutomatedAlgoTradingApp">
                         <div class="text" onclick="showPopup(this)">
                             <h5 class="text date">November 2024 - Present</h5>
                             <h4 class="text header">Automated Algorithmic Trading Application</h4>
@@ -311,111 +318,14 @@
                             <a class="git-btn" target="_blank" href="https://github.com/SaiGopal-Challa/AutomatedAlgoTradingAgent">View on GitHub</a>
                             <a class="git-btn" target="_blank" href="https://saigopalchalla.com/AutomatedAlgoTradingAgent">Visit the Website</a>
                         </div>
-                    </div>
+                    </div> *@
                         
                 </div>
             </div>
             <div class="outside-container" id="skill-container">
                 <h3 class="proj-title">Technical Skills</h3>
                 <div id="skills">
-                    <div class="skill-container">
-                        <img class="skill-icon" id="python" src="images/python-icon.png" />
-                        <span class="skill-name">Python</span>
-                        <div class="proficiency-hover">
-                            <span class="proficiency-text">Proficiency</span>
-                            <div class="proficiency-wrapper">
-                                <div class="proficiency-bar-bg">
-                                    <div class="proficiency-bar" data-percentage="85"></div>
-                                </div>
-                                <span class="proficiency-percent">85%</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="skill-container">
-                        <img class="skill-icon" id="java" src="images/java-icon.png" />
-                        <span class="skill-name">Java</span>
-                        <div class="proficiency-hover">
-                            <span class="proficiency-text">Proficiency</span>
-                            <div class="proficiency-wrapper">
-                                <div class="proficiency-bar-bg">
-                                    <div class="proficiency-bar" data-percentage="75"></div>
-                                </div>
-                                <span class="proficiency-percent">75%</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="skill-container">
-                        <img class="skill-icon" id="csharp" src="images/csharp-icon.png" />
-                        <span class="skill-name">C#</span>
-                        <div class="proficiency-hover">
-                            <span class="proficiency-text">Proficiency</span>
-                            <div class="proficiency-wrapper">
-                                <div class="proficiency-bar-bg">
-                                    <div class="proficiency-bar" data-percentage="90"></div>
-                                </div>
-                                <span class="proficiency-percent">90%</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="skill-container">
-                        <img class="skill-icon" id="javascript" src="images/js-icon.png" />
-                        <span class="skill-name">JavaScript</span>
-                        <div class="proficiency-hover">
-                            <span class="proficiency-text">Proficiency</span>
-                            <div class="proficiency-wrapper">
-                                <div class="proficiency-bar-bg">
-                                    <div class="proficiency-bar" data-percentage="80"></div>
-                                </div>
-                                <span class="proficiency-percent">80%</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="skill-container">
-                        <img class="skill-icon" id="html5" src="images/html-icon.png" />
-                        <span class="skill-name">HTML5</span>
-                        <div class="proficiency-hover">
-                            <span class="proficiency-text">Proficiency</span>
-                            <div class="proficiency-wrapper">
-                                <div class="proficiency-bar-bg">
-                                    <div class="proficiency-bar" data-percentage="95"></div>
-                                </div>
-                                <span class="proficiency-percent">95%</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="skill-container">
-                        <img class="skill-icon" id="css3" src="images/css-icon.png" />
-                        <span class="skill-name">CSS3</span>
-                        <div class="proficiency-hover">
-                            <span class="proficiency-text">Proficiency</span>
-                            <div class="proficiency-wrapper">
-                                <div class="proficiency-bar-bg">
-                                    <div class="proficiency-bar" data-percentage="90"></div>
-                                </div>
-                                <span class="proficiency-percent">90%</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="skill-container">
-                        <img class="skill-icon" id="json" src="images/json-icon.png" />
-                        <span class="skill-name">JSON</span>
-                        <div class="proficiency-hover">
-                            <span class="proficiency-text">Proficiency</span>
-                            <div class="proficiency-wrapper">
-                                <div class="proficiency-bar-bg">
-                                    <div class="proficiency-bar" data-percentage="85"></div>
-                                </div>
-                                <span class="proficiency-percent">85%</span>
-                            </div>
-                        </div>
-                    </div>
-            
+
                     <div class="skill-container">
                         <img class="skill-icon" id="dotnet" src="images/net-icon.png" />
                         <span class="skill-name">.NET</span>
@@ -423,16 +333,16 @@
                             <span class="proficiency-text">Proficiency</span>
                             <div class="proficiency-wrapper">
                                 <div class="proficiency-bar-bg">
-                                    <div class="proficiency-bar" data-percentage="80"></div>
+                                    <div class="proficiency-bar" data-percentage="70"></div>
                                 </div>
-                                <span class="proficiency-percent">80%</span>
+                                <span class="proficiency-percent">70%</span>
                             </div>
                         </div>
                     </div>
-            
+
                     <div class="skill-container">
-                        <img class="skill-icon" id="bootstrap" src="images/bootstrap-icon.png" />
-                        <span class="skill-name">Bootstrap</span>
+                        <img class="skill-icon" id="csharp" src="images/csharp-icon.png" />
+                        <span class="skill-name">C#</span>
                         <div class="proficiency-hover">
                             <span class="proficiency-text">Proficiency</span>
                             <div class="proficiency-wrapper">
@@ -443,38 +353,11 @@
                             </div>
                         </div>
                     </div>
+
             
                     <div class="skill-container">
-                        <img class="skill-icon" id="pandas" src="images/pandas-icon.png" />
-                        <span class="skill-name">Pandas</span>
-                        <div class="proficiency-hover">
-                            <span class="proficiency-text">Proficiency</span>
-                            <div class="proficiency-wrapper">
-                                <div class="proficiency-bar-bg">
-                                    <div class="proficiency-bar" data-percentage="75"></div>
-                                </div>
-                                <span class="proficiency-percent">75%</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="skill-container">
-                        <img class="skill-icon" id="numpy" src="images/numpy-icon.png" />
-                        <span class="skill-name">NumPy</span>
-                        <div class="proficiency-hover">
-                            <span class="proficiency-text">Proficiency</span>
-                            <div class="proficiency-wrapper">
-                                <div class="proficiency-bar-bg">
-                                    <div class="proficiency-bar" data-percentage="70"></div>
-                                </div>
-                                <span class="proficiency-percent">70%</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="skill-container">
-                        <img class="skill-icon" id="photoshop" src="images/photoshop-icon.png" />
-                        <span class="skill-name">Photoshop</span>
+                        <img class="skill-icon" id="java" src="images/java-icon.png" />
+                        <span class="skill-name">Java</span>
                         <div class="proficiency-hover">
                             <span class="proficiency-text">Proficiency</span>
                             <div class="proficiency-wrapper">
@@ -499,7 +382,7 @@
                             </div>
                         </div>
                     </div>
-            
+
                     <div class="skill-container">
                         <img class="skill-icon" id="oraclesql" src="images/oraclesql-icon.png" />
                         <span class="skill-name">Oracle SQL</span>
@@ -513,6 +396,179 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="skill-container">
+                        <img class="skill-icon" id="android" src="images/android-icon.png" />
+                        <span class="skill-name">Android</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="50"></div>
+                                </div>
+                                <span class="proficiency-percent">50%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-container">
+                        <img class="skill-icon" id="aws" src="images/aws-icon.png" />
+                        <span class="skill-name">AWS</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="40"></div>
+                                </div>
+                                <span class="proficiency-percent">40%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-container">
+                        <img class="skill-icon" id="json" src="images/json-icon.png" />
+                        <span class="skill-name">JSON</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="65"></div>
+                                </div>
+                                <span class="proficiency-percent">65%</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-container">
+                        <img class="skill-icon" id="javascript" src="images/js-icon.png" />
+                        <span class="skill-name">JavaScript</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="50"></div>
+                                </div>
+                                <span class="proficiency-percent">50%</span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="skill-container">
+                        <img class="skill-icon" id="typescript" src="images/ts-icon.png" />
+                        <span class="skill-name">TypeScript</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="40"></div>
+                                </div>
+                                <span class="proficiency-percent">40%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-container">
+                        <img class="skill-icon" id="html5" src="images/html-icon.png" />
+                        <span class="skill-name">HTML5</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="50"></div>
+                                </div>
+                                <span class="proficiency-percent">50%</span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="skill-container">
+                        <img class="skill-icon" id="css3" src="images/css-icon.png" />
+                        <span class="skill-name">CSS3</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="50"></div>
+                                </div>
+                                <span class="proficiency-percent">50%</span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    
+                    
+                    <div class="skill-container">
+                        <img class="skill-icon" id="bootstrap" src="images/bootstrap-icon.png" />
+                        <span class="skill-name">Bootstrap</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="40"></div>
+                                </div>
+                                <span class="proficiency-percent">40%</span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    @* <div class="skill-container">
+                        <img class="skill-icon" id="pandas" src="images/pandas-icon.png" />
+                        <span class="skill-name">Pandas</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="75"></div>
+                                </div>
+                                <span class="proficiency-percent">75%</span>
+                            </div>
+                        </div>
+                    </div> *@
+
+                    <div class="skill-container">
+                        <img class="skill-icon" id="python" src="images/python-icon.png" />
+                        <span class="skill-name">Python</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="40"></div>
+                                </div>
+                                <span class="proficiency-percent">40%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-container">
+                        <img class="skill-icon" id="numpy" src="images/numpy-icon.png" />
+                        <span class="skill-name">NumPy</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="40"></div>
+                                </div>
+                                <span class="proficiency-percent">40%</span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="skill-container">
+                        <img class="skill-icon" id="photoshop" src="images/photoshop-icon.png" />
+                        <span class="skill-name">Photoshop</span>
+                        <div class="proficiency-hover">
+                            <span class="proficiency-text">Proficiency</span>
+                            <div class="proficiency-wrapper">
+                                <div class="proficiency-bar-bg">
+                                    <div class="proficiency-bar" data-percentage="60"></div>
+                                </div>
+                                <span class="proficiency-percent">60%</span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    
                 </div>
             </div>
         </div>

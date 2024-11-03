@@ -67,31 +67,39 @@ function toggleExpandText(event) {
 function addSkillColors(event) {
     const project = event.currentTarget;
     if (project.id === 'sgcportfolio') {
-        for (skill of ['html5', 'css3', 'javascript', 'csharp', 'dotnet', 'bootstrap', 'photoshop']) {
+        for (skill of ['html5', 'css3', 'javascript', 'csharp', 'dotnet', 'bootstrap', 'photoshop', 'aws']) {
             skillElement = document.getElementById(skill);
             skillElement.classList.add("selected");
         }
     }
     //DotNet | JSON | Oracle SQL | C# | Redis | Bootstrap | JavaScript
     if (project.id === 'signin&upMS') {
-        for (skill of ['dotnet', 'bootstrap', 'html5', 'css3', 'javascript', 'json', 'redis', 'oraclesql']) {
+        for (skill of ['dotnet', 'bootstrap', 'html5', 'css3', 'javascript', 'json', 'redis', 'oraclesql', 'aws']) {
             skillElement = document.getElementById(skill);
             skillElement.classList.add("selected");
         }
     }
     if (project.id === 'BlogEngineSGC') {
-        for (skill of ['dotnet', 'bootstrap', 'html5', 'css3', 'javascript', 'json', 'redis', 'oraclesql']) {
+        for (skill of ['dotnet', 'bootstrap', 'html5', 'css3', 'javascript', 'json', 'redis', 'oraclesql', 'aws']) {
+            skillElement = document.getElementById(skill);
+            skillElement.classList.add("selected");
+        }
+    }
+    if (project.id === 'AndroidApplications') {
+        for (skill of ['android', 'java', 'html5', 'css3', 'typescript', 'photoshop']) {
             skillElement = document.getElementById(skill);
             skillElement.classList.add("selected");
         }
     }
     if (project.id === 'AutomatedAlgoTradingApp') {
-        for (skill of ['python', 'pandas', 'html5', 'css3', 'javascript', 'json', 'redis', 'oraclesql']) {
+        for (skill of ['python', 'pandas', 'html5', 'css3', 'javascript', 'json', 'redis', 'oraclesql', 'aws']) {
             skillElement = document.getElementById(skill);
             skillElement.classList.add("selected");
         }
     }
-    // need to add skills for the rest of the projects 
+    
+    //Android | HTML | CSS | TypeScript | Java | Bootstrap | MVVM | MVC | Photoshop
+    // need to add skills for the rest of the projects  AndroidApplications
 }
 
 /**
@@ -395,8 +403,40 @@ projects.forEach(project => {
     });
 });
 
+// Slideshow functionality
+/*
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slideshow-image');
+const totalSlides = slides.length;
 
+function showSlide(index) {
+    // Remove active and animation classes from all slides
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active', 'slide-in', 'slide-out');
+        if (i === index) {
+            slide.classList.add('active'); // Show current slide
+        }
+    });
+}
 
+function startSlideshow() {
+    showSlide(currentIndex);
+    setInterval(() => {
+        slides[currentIndex].classList.add('slide-out'); // Slide out current image
+        currentIndex = (currentIndex + 1) % totalSlides; // Update index
+        slides[currentIndex].classList.remove('slide-out'); // Remove slide-out class for the new image
+        slides[currentIndex].classList.add('slide-in'); // Slide in the new image
+
+        setTimeout(() => {
+            slides[currentIndex].classList.add('active'); // Make the new image active
+        }, 1000); // Delay for the slide out transition
+    }, 8000); // Time each image is displayed (8 seconds)
+}
+
+// Start the slideshow when the page loads
+window.onload = startSlideshow;
+*/
+// end of slideshow functionality
 
 
 /*document.addEventListener('DOMContentLoaded', function () {

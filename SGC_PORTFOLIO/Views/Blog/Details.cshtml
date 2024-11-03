@@ -12,10 +12,71 @@
     {
         <div class="blog-section">
             <p>@contentSection.Text</p>
+
+            @* Display each image if ImagePaths are present *@
+            @if (contentSection.ImagePaths != null && contentSection.ImagePaths.Any())
+            {
+                <div class="blog-images">
+                    @foreach (var imagePath in contentSection.ImagePaths)
+                    {
+                        <img src="~/BlogTexts/@imagePath" class="blog-image" alt="Blog Image" />
+                    }
+                </div>
+            }
+        </div>
+    }
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@model SGC_PORTFOLIO.Models.BlogEntry
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="blog-content">
+    <h1>@Model.Title</h1>
+    <p><small class="text-muted">Published on @Model.CreatedAt.ToString("MMMM dd, yyyy")</small></p>
+
+    @foreach (var contentSection in Model.Content)
+    {
+        <div class="blog-section">
+            <p>@contentSection.Text</p>
             @if (!string.IsNullOrEmpty(contentSection.ImagePath))
             {
                 <img src="~/BlogTexts/@contentSection.ImagePath" class="blog-image" alt="Blog Image" />
             }
         </div>
     }
-</div>
+</div>*@
