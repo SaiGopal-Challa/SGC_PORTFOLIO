@@ -16,7 +16,7 @@ builder.Services.Configure<GzipCompressionProviderOptions>(options =>
 {
     options.Level = System.IO.Compression.CompressionLevel.Optimal;
 });
-builder.WebHost.UseUrls("http://127.0.0.1:5001");
+//builder.WebHost.UseUrls("http://127.0.0.1:5001");
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
