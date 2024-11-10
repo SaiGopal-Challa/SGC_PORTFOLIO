@@ -8,11 +8,20 @@
         }
     },
     "profiles": {
+        "SGC_PORTFOLIO_DEV": {
+            "commandName": "Project",
+            "dotnetRunMessages": true,
+            "launchBrowser": true,
+            "applicationUrl": "https://localhost:7950;http://localhost:7951",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
         "SGC_PORTFOLIO": {
             "commandName": "Project",
             "dotnetRunMessages": true,
             "launchBrowser": true,
-            "applicationUrl": "http://localhost:5000 , http://localhost:5001",
+            "applicationUrl": "https://localhost:7167;http://localhost:7168",
             "environmentVariables": {
                 "ASPNETCORE_ENVIRONMENT": "Production"
             }
