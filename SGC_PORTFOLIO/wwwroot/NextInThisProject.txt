@@ -1,0 +1,10 @@
+Adding this file to note down next steps, mainly updates, addition of new features, pages and functionality. 
+
+Priority
+1. Need to update css ( color palate, project section's padding, volunteer section's bounds )
+2. Need to change the photo 
+
+Points
+1. Need to add a summarized section - That highlights all the feature info into a single slide, with a circular chart. 
+
+2. Need to redirect to Blog Microservice rather than current basic text based blogs.
