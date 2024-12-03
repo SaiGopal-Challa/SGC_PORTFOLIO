@@ -86,10 +86,9 @@ Here are some of the projects I've worked on:
 
 I love discussing technology, collaborating on open-source projects, or just chatting about anything geeky. Here's how you can connect with me:
 
-- **GitHub**: [@your-github](https://github.com/your-github)
-- **Twitter**: [@your-twitter](https://twitter.com/your-twitter)
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/your-profile)
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **GitHub**: [@your-github](https://github.com/SaiGopal-Challa)
+- **LinkedIn**: [Your LinkedIn](https://www.linkedin.com/in/saigopal-challa/)
+- **Email**: [your-email@example.com](mailto:saigopal.challa@gmail.com)
 
 ---
 
