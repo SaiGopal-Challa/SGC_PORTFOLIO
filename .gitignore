@@ -24,3 +24,10 @@
 /SGC_PORTFOLIO/appsettings.Production.json
 /.vs/ProjectEvaluation
 /SGC_PORTFOLIO/obj/Container
+/SGC_PORTFOLIO/obj/SGC_PORTFOLIO.csproj.nuget.g.props
+/SGC_PORTFOLIO/SGC_PORTFOLIO.csproj.user
+/SGC_PORTFOLIO/obj/Debug/net6.0/SGC_PORTFOLIO.assets.cache
+/SGC_PORTFOLIO/obj/Debug/net6.0/SGC_PORTFOLIO.GeneratedMSBuildEditorConfig.editorconfig
+/SGC_PORTFOLIO/obj/project.nuget.cache
+/SGC_PORTFOLIO/obj/SGC_PORTFOLIO.csproj.nuget.dgspec.json
+/SGC_PORTFOLIO/obj/project.assets.json
