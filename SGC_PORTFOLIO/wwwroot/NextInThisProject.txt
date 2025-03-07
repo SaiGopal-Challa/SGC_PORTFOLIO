@@ -6,6 +6,8 @@ Priority
 3. Add WTC_CMS project to the portfolio
 
 Points
-1. Need to add a summarized section - That highlights all the feature info into a single slide, with a circular chart. 
+1. Need to add a summarry section - That highlights all the feature info into a single slide, with a circular chart. 
 
-2. Need to redirect to Blog Microservice rather than current basic text based blogs.
+2. Need to redirect to Blog Microservice rather than current basic text based blogs. ( Need to rethink, as the blog service is dropped)
+
+** Full modification required **
