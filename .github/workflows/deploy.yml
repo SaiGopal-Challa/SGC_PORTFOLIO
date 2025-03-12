@@ -22,22 +22,25 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
           script: |
-            # Change to your project directory on EC2
+            # Navigate to the repository root on EC2
             cd /home/ubuntu/SGC_PORTFOLIO
 
-            # Fetch and switch to the EC2-Prod branch
+            # Update the code from the EC2-Prod branch
             git fetch --all
             git checkout EC2-Prod
             git pull origin EC2-Prod
 
-            # Navigate to the directory containing your .csproj (adjust the path if necessary)
+            # Change into the folder that contains the .csproj file
             cd SGC_PORTFOLIO
 
-            # Publish the application using .NET 8.0 (ensure .NET 8.0 is installed on EC2)
-            dotnet publish SGC_PORTFOLIO.csproj -c Release -o /home/ubuntu/app/publish /p:UseAppHost=false
+            # Create the output directory with sudo to avoid permission issues
+            sudo mkdir -p /app/publish
 
-            # Stop any running instance of the application (if exists)
-            pkill -f SGC_PORTFOLIO || true
+            # Publish the application using .NET 8.0 with sudo
+            sudo dotnet publish SGC_PORTFOLIO.csproj -c Release -o /app/publish /p:UseAppHost=false
 
-            # Start the application in the background and redirect logs
-            nohup dotnet /home/ubuntu/app/publish/SGC_PORTFOLIO.dll > /dev/null 2>&1 &
+            # Kill any running instance of the application (if any)
+            sudo pkill -f SGC_PORTFOLIO || true
+
+            # Start the new application in the background without logging
+            sudo nohup dotnet /app/publish/SGC_PORTFOLIO.dll > /dev/null 2>&1 &
