@@ -12,9 +12,9 @@
     "SGC_PORTFOLIO": {
       "commandName": "Project",
       "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Production"
-      },
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development"
+        },
       "dotnetRunMessages": true,
       "applicationUrl": "https://localhost:7167;http://localhost:7168"
     },
