@@ -42,5 +42,5 @@ jobs:
             # Kill any running instance of the application (if any)
             sudo pkill -f SGC_PORTFOLIO || true
 
-            # Start the new application in the background without logging
-            sudo nohup dotnet /app/publish/SGC_PORTFOLIO.dll > /dev/null 2>&1 &
+            # Start the new application in the background using setsid to detach it
+            sudo setsid dotnet /app/publish/SGC_PORTFOLIO.dll > /dev/null 2>&1 &
