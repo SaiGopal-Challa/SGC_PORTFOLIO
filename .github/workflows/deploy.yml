@@ -1,0 +1,43 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - EC2-Prod
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code from EC2-Prod branch
+        uses: actions/checkout@v3
+        with:
+          ref: EC2-Prod
+
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v0.1.5
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            # Change to your project directory on EC2
+            cd /home/ubuntu/SGC_PORTFOLIO
+
+            # Fetch and switch to the EC2-Prod branch
+            git fetch --all
+            git checkout EC2-Prod
+            git pull origin EC2-Prod
+
+            # Navigate to the directory containing your .csproj (adjust the path if necessary)
+            cd SGC_PORTFOLIO/SGC_PORTFOLIO
+
+            # Publish the application using .NET 8.0 (ensure .NET 8.0 is installed on EC2)
+            dotnet publish SGC_PORTFOLIO.csproj -c Release -o /app/publish /p:UseAppHost=false
+
+            # Stop any running instance of the application (if exists)
+            pkill -f SGC_PORTFOLIO || true
+
+            # Start the application in the background and redirect logs
+            nohup dotnet /app/publish/SGC_PORTFOLIO.dll > /dev/null 2>&1 &
