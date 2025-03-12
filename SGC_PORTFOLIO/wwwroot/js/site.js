@@ -194,16 +194,16 @@ function toggleDarkMode() {
     const bottomLeftLine = document.getElementById('bottom-left-line');
 
     // Check for the custom property to track state
-    const isDarkMode = toggleBtn.dataset.darkMode === "true";
+    const isDarkMode = toggleBtn.dataset.darkMode === "false";
 
     if (!isDarkMode) {
         // Enable dark mode
-        localStorage.setItem('darkMode', 'on');
+        localStorage.setItem('darkMode', 'off');
         for (const element of elements) {
             element.classList.add('darkmode');
         }
         darkModeImage.src = '/images/sun.png'; // Change image to sun
-        toggleBtn.dataset.darkMode = "true"; // Set custom attribute to track state
+        toggleBtn.dataset.darkMode = "false"; // Set custom attribute to track state
 
         try {
             topRightLine.src = '/images/dark-top-right-line.png';
@@ -212,12 +212,12 @@ function toggleDarkMode() {
 
     } else {
         // Disable dark mode
-        localStorage.setItem('darkMode', 'off');
+        localStorage.setItem('darkMode', 'on');
         for (const element of elements) {
             element.classList.remove('darkmode');
         }
         darkModeImage.src = '/images/moon.png'; // Change image to moon
-        toggleBtn.dataset.darkMode = "false"; // Update state
+        toggleBtn.dataset.darkMode = "true"; // Update state
 
         try {
             topRightLine.src = '/images/top-right-line.png';
