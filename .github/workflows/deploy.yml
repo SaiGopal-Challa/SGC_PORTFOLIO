@@ -34,10 +34,10 @@ jobs:
             cd SGC_PORTFOLIO
 
             # Publish the application using .NET 8.0 (ensure .NET 8.0 is installed on EC2)
-            dotnet publish SGC_PORTFOLIO.csproj -c Release -o /app/publish /p:UseAppHost=false
+            dotnet publish SGC_PORTFOLIO.csproj -c Release -o /home/ubuntu/app/publish /p:UseAppHost=false
 
             # Stop any running instance of the application (if exists)
             pkill -f SGC_PORTFOLIO || true
 
             # Start the application in the background and redirect logs
-            nohup dotnet /app/publish/SGC_PORTFOLIO.dll > /dev/null 2>&1 &
+            nohup dotnet /home/ubuntu/app/publish/SGC_PORTFOLIO.dll > /dev/null 2>&1 &
