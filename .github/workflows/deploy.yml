@@ -31,7 +31,7 @@ jobs:
             git pull origin EC2-Prod
 
             # Navigate to the directory containing your .csproj (adjust the path if necessary)
-            cd SGC_PORTFOLIO/SGC_PORTFOLIO
+            cd SGC_PORTFOLIO
 
             # Publish the application using .NET 8.0 (ensure .NET 8.0 is installed on EC2)
             dotnet publish SGC_PORTFOLIO.csproj -c Release -o /app/publish /p:UseAppHost=false
