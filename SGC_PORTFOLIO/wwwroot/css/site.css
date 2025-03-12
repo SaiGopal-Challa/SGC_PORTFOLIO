@@ -607,7 +607,8 @@ h1 {
     display: flex;
     flex-direction: row;
     width: 100vw;
-    padding-right: 30px;
+    padding-right: 100px;
+    padding-left: 100px;
     align-items: center;
 }
 
@@ -621,13 +622,14 @@ h1 {
 }
 
 .proj-title {
-    margin-bottom: 0;
+    margin-bottom: 0px;
     margin-top: 30px;
     text-align: center;
 }
 
 .project {
-    min-height:500px;
+    min-width: 280px;
+    min-height: 600px;
     height: auto;
     margin-left: 30px;
     padding: 30px;
@@ -719,6 +721,8 @@ h1 {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
+    padding-right: 45px;
+    padding-bottom: 20px;
     max-width: 90vw; /* Set a maximum width */
     max-height: 90vh; /* Ensure popup doesn't overflow the screen */
     overflow-y: auto; /* Scroll if content is too large */
