@@ -33,14 +33,8 @@ jobs:
             # Change into the folder that contains the .csproj file
             cd SGC_PORTFOLIO
 
-            # Create the output directory with sudo to avoid permission issues
-            sudo mkdir -p /app/publish
-
-            # Publish the application using .NET 8.0 with sudo
+            # Publish the application using .NET 8.0 (publishing to /app/publish)
             sudo dotnet publish SGC_PORTFOLIO.csproj -c Release -o /app/publish /p:UseAppHost=false
 
-            # Kill any running instance of the application (if any)
-            sudo pkill -f SGC_PORTFOLIO || true
-
-            # Start the new application on port 80 using setsid with --urls to bind to port 80
-            sudo setsid sh -c 'dotnet /app/publish/SGC_PORTFOLIO.dll --urls http://*:80 > /dev/null 2>&1 &'
+            # Restart the systemd service to load the new build
+            sudo systemctl restart sgc_portfolio.service
