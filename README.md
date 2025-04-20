@@ -1,7 +1,7 @@
 
 # 👨‍💻 Welcome to My Developer Page!
 
-Hi there! 👋 I'm **[Sai Gopal Challa]**, a passionate software engineer specializing in **microservices**, **cloud computing**, **API development** and **web development** 🌐. I love creating clean, scalable, and high-performance applications.
+Hi there! 👋 I'm **[Sai Gopal Challa]**, a software engineer specializing in **Backend Development** working on **microservices**, **cloud components**, **API development** and **web development** 🌐. I love creating clean, scalable, and high-performance applications.
 
 > "Code is like humor. When you have to explain it, it’s bad." – Cory House
 
@@ -30,7 +30,7 @@ I work with a broad range of tools and technologies that help me build powerful 
 - **Database Management**:
   - ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23336791.svg?style=flat&logo=postgresql&logoColor=white)
   - ![Oracle](https://img.shields.io/badge/Oracle-%23F80000.svg?style=flat&logo=oracle&logoColor=white)
-  - ![Dapper](https://img.shields.io/badge/Dapper-%23000000.svg?style=flat&logo=github&logoColor=white)
+  - ![Dapper](https://img.shields.io/badge/Dapper-000000?style=flat&logo=data:image/png;base64,<BASE64_ENCODED_IMAGE>&logoColor=white)
 
 - **Cloud & DevOps**:
   - ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat&logo=amazonaws&logoColor=white)
@@ -59,14 +59,14 @@ I work with a broad range of tools and technologies that help me build powerful 
 
 Here are some of the projects I've worked on:
 
-- [**Sign In / Sign Up Microservice**](https://github.com/SaiGopal-Challa/AuthServiceSGC)  
+- [**Samudbhav**](https://github.com/ADOGC-Org)  
+  A **Community application** developed using **React** and **.Net COre** that allows a diverse community to participate in it's various chapters.
+
+- [**Authentication Microservice**](https://github.com/SaiGopal-Challa/AuthServiceSGC)  
   A **microservice** that handles user authentication and client onboarding, implemented with **.NET Core** and deployed using **Docker** and **Kubernetes**. Includes **customized rate-limiting** functionality for security.
 
 - [**Portfolio Website**](https://github.com/SaiGopal-Challa/SGC_PORTFOLIO)  
   An **MVC application** built with **.NET Core** that includes a **Blog section** for users to post and share articles. Fully responsive, and designed using **Bootstrap**.
-
-- [**Mini-Blog Engine**](https://github.com/SaiGopal-Challa/BlogEngineSGC)  
-  A **mini-blog engine** developed using **.NET Core** and **Razor Pages** that allows users to create, edit, and publish blog posts.
 
 - **Android Applications**:  
   Developed several Android apps, including:
@@ -129,5 +129,5 @@ Feel free to reach out if you want to collaborate on **backend-focused projects*
 
 ---
 
-![Footer Image](https://your-footer-image-url.com)
+<!-- ![Footer Image](https://your-footer-image-url.com) -->
 
