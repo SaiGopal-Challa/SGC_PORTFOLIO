@@ -22,19 +22,19 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
           script: |
-            # # Navigate to the repository root on EC2
-            # cd /home/ubuntu/SGC_PORTFOLIO
+            # Navigate to the repository root on EC2
+            cd /home/ubuntu/SGC_PORTFOLIO
 
-            # # Update the code from the EC2-Prod branch
-            # git fetch --all
-            # git checkout EC2-Prod
-            # git pull origin EC2-Prod
+            # Update the code from the EC2-Prod branch
+            git fetch --all
+            git checkout EC2-Prod
+            git pull origin EC2-Prod
 
-            # # Change into the folder that contains the .csproj file
-            # cd SGC_PORTFOLIO
+            # Change into the folder that contains the .csproj file
+            cd SGC_PORTFOLIO
 
-            # # Publish the application using .NET 8.0 (publishing to /app/publish)
-            # sudo dotnet publish SGC_PORTFOLIO.csproj -c Release -o /app/publish /p:UseAppHost=false
+            # Publish the application using .NET 8.0 (publishing to /app/publish)
+            sudo dotnet publish SGC_PORTFOLIO.csproj -c Release -o /app/publish /p:UseAppHost=false
 
-            # # Restart the systemd service to load the new build
-            # sudo systemctl restart sgc_portfolio.service
+            # Restart the systemd service to load the new build
+            sudo systemctl restart sgc_portfolio.service
