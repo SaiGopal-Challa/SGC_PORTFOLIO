@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "Portfolio Summary";
+}
+
+<section class="summary-section">
+    <div class="summary-container">
+        <div class="summary-grid">
+            <!-- Left Square - Profile Info -->
+            <div class="profile-card">
+                <div class="profile-card-content">
+                    <div class="profile-header">
+                        <div class="profile-header-text">
+                            @* <div class="badge">Software Engineer</div> *@
+							<h1 class="profile-name">Sai Gopal Challa</h1>
+                            <p class="profile-title">Full-stack Developer</p>
+                            <p class="profile-brief">Hi, I'm a software Engineer with 2 years of experience in designing and developing robust and scalable systems.</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1747640763510-3770f1a02046?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Profile" class="profile-image" />
+                    </div>
+                    <div class="facts-container">
+                        <h3 class="facts-title">About Me !</h3>
+                        <div class="facts-wrapper">
+                            <p class="fact-text" data-index="0">Full-stack developer with 2+ years of experience</p>
+                            <p class="fact-text" data-index="1">Specialized in building scalable microservices</p>
+                            <p class="fact-text" data-index="2">Passionate about clean architecture and scalable systems</p>
+                            <p class="fact-text" data-index="3">Open source enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Square - Skills & Social -->
+            <div class="skills-card">
+                <div class="skills-card-content">
+                    <div class="social-buttons">
+                        <div class="social-buttons-container">
+                            <a href="https://github.com/SaiGopal-Challa" class="social-bubble" target="_blank" title="GitHub">
+                                <img src="~/images/githubicon.gif" alt="GitHub" class="social-icon" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/saigopal-challa/" class="social-bubble" target="_blank" title="LinkedIn">
+                                <img src="~/images/linkedin-icon.png" alt="LinkedIn" class="social-icon" />
+                            </a>
+                            <a href="https://drive.google.com/drive/folders/1VuaBAhpS-ef0I8UegrVAu8rCYg6nRCsk" class="social-button text-button resume-btn" target="Download my Resume">
+                                <span>Resume</span>
+                            </a>
+                            <a href="https://calendar.app.google/PY9rVmT1k64UqwF7A" class="social-button text-button meet-btn" target="Schedule a meeting">
+                                <span>Meet</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skills-circle-container">
+                        <div class="skills-circle">
+                            <div class="quadrant" id="q1" data-quadrant="1" data-title="Languages">
+                                <div class="quadrant-content">
+                                    <div class="visible-skills"></div>
+                                </div>
+                            </div>
+                            <div class="quadrant" id="q2" data-quadrant="2" data-title="Frameworks">
+                                <div class="quadrant-content">
+                                    <div class="visible-skills"></div>
+                                </div>
+                            </div>
+                            <div class="quadrant" id="q3" data-quadrant="3" data-title="Tools & Libs">
+                                <div class="quadrant-content">
+                                    <div class="visible-skills"></div>
+                                </div>
+                            </div>
+                            <div class="quadrant" id="q4" data-quadrant="4" data-title="Tech Topics">
+                                <div class="quadrant-content">
+                                    <div class="visible-skills"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="circle-labels"
+                             width="340" height="340"
+                             viewBox="0 0 340 340"
+                             style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 3;">
+                            <defs>
+                                <!-- Main circle radius: 160, title circle radius: 170 (160 + 10) -->
+                                <path id="arc1" d="M170,0 A170,170 0 0,1 340,170" fill="none"/>
+                                <path id="arc2" d="M340,170 A170,170 0 0,1 170,340" fill="none"/>
+                                <path id="arc3" d="M170,340 A170,170 0 0,1 0,170" fill="none"/>
+                                <path id="arc4" d="M0,170 A170,170 0 0,1 170,0" fill="none"/>
+                            </defs>
+                            <g transform="rotate(15,170,170)">
+                                <text font-size="18" fill="#fff" font-weight="bold">
+                                    <textPath href="#arc1" startOffset="18%">Frameworks</textPath>
+                                </text>
+                                <text font-size="18" fill="#fff" font-weight="bold">
+                                    <textPath href="#arc2" startOffset="18%">Tools &amp; Libs</textPath>
+                                </text>
+                                <text font-size="18" fill="#fff" font-weight="bold">
+                                    <textPath href="#arc3" startOffset="18%">Tech Topics</textPath>
+                                </text>
+                                <text font-size="18" fill="#fff" font-weight="bold">
+                                    <textPath href="#arc4" startOffset="18%">Languages</textPath>
+                                </text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Template -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-circle" id="popup-circle">
+            <button class="close-popup" id="close-popup">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="popup-title" id="popup-title"></h3>
+            <div class="popup-skills-grid" id="popup-skills"></div>
+        </div>
+
+        <div class="project-box" id="project-box">
+            <h4 class="project-box-title">Projects with <span id="skill-name"></span></h4>
+            <ul class="project-list" id="project-list"></ul>
+        </div>
+    </div>
+</section>
+
+

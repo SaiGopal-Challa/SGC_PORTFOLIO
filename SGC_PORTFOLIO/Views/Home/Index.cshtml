@@ -31,48 +31,9 @@
 
 <body>
     <div id="top"></div>
-    <div class="section" id="introduction">
-        <div id="bg-div"></div>
-        <div id="intro-content">
-            <div id="intro-left" class="animate-scroll intro-half">
-                @* <div id="slideshow-container">
-                    <div class="slideshow-image" id="slide-1"> <img src="images/headshot-bw.jpeg" alt="Image 1" /> </div>
-                    <div class="slideshow-image" id="slide-2"> <img src="images/headshot-bw-123.jfif" alt="Image 2" /> </div>
-                    <div class="slideshow-image" id="slide-3"> <img src="images/headshot-color.jpeg" alt="Image 3" /> </div>
-                    <!-- Add more images as needed -->
-                    <div class="slideshow-image" id="slide-20"> <img src="images/headshot-color-123.jfif" alt="Image 20" /> </div>
-                </div> *@
-                <div id="headshot-content">
-                    <div id="headshots">
-                        <picture>
-                            <source srcset="images/headshot-bw.webp" type="image/webp">
-                            <img id="headshot-bw" class="headshot" src="/images/headshot-bw.webp" alt="black and white headshot of gopal challa" width="1000" />
-                        </picture>
-                        <picture>
-                            <source srcset="images/headshot-color.webp" type="image/webp">
-                            <img id="headshot-color" class="headshot crop" src="/images/headshot-color.webp" alt="color headshot of gopal challa" width="1000" />
-                        </picture>
-                    </div>
-                </div> 
-                <div id="social-buttons">
-                    <a id="in-btn" class="btn btn-primary social" target="_blank" href="https://www.linkedin.com/in/saigopal-challa/"><img class="social-img" src="/images/in-icon.png" alt="linkedin icon" width="64"/></a>
-                    @*<a id="h-btn"class="btn btn-primary social" target="_blank" href="https://app.joinhandshake.com/"><img class="social-img" src="/images/h-icon.png" alt="handshake icon"width="64"/></a>*@
-                    <a id="git-btn" class="btn btn-primary social" target="_blank" href="https://github.com/SaiGopal-Challa"><img class="social-img" src="images/git-icon.png" alt="github icon" width="64"/></a>
-                </div>
-            </div>
-            <div id="intro-right" class="animate-scroll intro-half">
-                <div id="title-text">
-                    <h1 id="intro-title"><b>Hello,</b><br />I'm Gopal Challa</h1>
-                    <p id="intro-tagline"> Software Developer </p>
-                </div>
-                <div id="intro-buttons">
-                    <a id="resume-btn" class="btn btn-primary intro" target="_blank" href="https://drive.google.com/drive/folders/1VuaBAhpS-ef0I8UegrVAu8rCYg6nRCsk?usp=sharing">RESUME</a>
-                    <a id="meeting-btn" class="btn btn-primary intro" target="_blank" href="https://calendar.app.google/Dgy1nnP8Dkp5YsDn7">SCHEDULE A MEETING</a>
-                </div>
-            </div>
-        </div>
-        <a class="btn-arrow" href=#about-anchor id="about-me-button">About Me<br />∨</a>
-    </div>
+    
+    @Html.Partial("SummarySection")
+
     <div id="about-anchor"></div>
     <article class="section" id="about-me">
         <div id="about-content">
@@ -215,16 +176,16 @@
                     <div class="edu-exp-div box-shadow animate-scroll">
                         <img class="edu-exp-img" src="images/myngo-logo.png" height="256" width="256" loading="lazy">
                         <div info>
-                            <h5 class="date"> June 2023 - Present</h5>
-                            <h4 class="header">LifeAndKnowledge NGO</h4>
-                            <h6 class="subheader">NGO to enhance lives of people belonging to various sectors of society</h6>
+                            <h5 class="date"> May 2025 - Present</h5>
+                            <h4 class="header">Samudbhav</h4>
+                            <h6 class="subheader">An organization to enhance lives of people belonging to various sectors of society</h6>
                             <p class="details">
                                 <ul class="details">
                                     <li>
-                                        We provide basic computer operation classes and tailoring classes to women from various sectors, mostly concentrating on homeworkers.
+                                        We provide training in computer usage and machine tailoring to women from various sectors, mostly impacting homeworkers from rural areas.
                                     </li>
                                     <li>
-                                        We also provide regular free online newsletters to help people understand the importance of education and how it can change their lives.
+										We also maintain a course platform called Supatham, which provides moral stories, case studies and curated course content for children of all ages.
                                     </li>
                                 </ul>
                             </p>
@@ -246,6 +207,34 @@
         <div class="collapse" id="proj-skill-info">
             <div class="outside-container">
                 <div id="projects">
+                    <div class="project animate-scroll" id="Samudbhav">
+                        <div class="text" onclick="showPopup(this)">
+                            <h5 class="text date">April 2025 - Present</h5>
+                            <h4 class="text header">Samudbhav</h4>
+                            <h6 class="text subheader">DotNet | Angular | PostgreSQL | C# | Redis | TypeScript</h6>
+                            <p class="limited-text">
+                                Samudbhav is a central community platform enabling membership, donations, and awareness.
+                            </p>
+                            <p class="more-text" style="display: none;">
+                                <l>
+									Developed a comprehensive community platform, enabling membership management, donations, and awareness campaigns.
+                                </l>
+                                <l>
+                                    Including Supatham, a learning hub with age-specific moral stories, case studies, and curated course content.
+                                </l>
+                                <l>
+                                    Created Adrishyaa, an e-commerce storefront promoting handmade and local products from remote communities.
+                                </l>
+                                
+                            </p>
+                        </div>
+                        <button class="more-btn" onclick="showPopup(this)">Show More</button>
+                        <div id="button-div">
+                            <a class="git-btn" target="_blank" href="https://github.com/ADOGC-Org/samudbhav">View on GitHub</a>
+                            <a class="git-btn" target="_blank" href="https://samudbhav.tech">Visit the Website</a>
+                        </div>
+                    </div>
+
                     <div class="project animate-scroll" id="sgcportfolio">
                         <div class="text" onclick="showPopup(this)">
                             <h5 class="text date">October 2024</h5>
