@@ -387,7 +387,7 @@
 
 #q1 .quadrant-content {
     padding-top: 9px !important;
-    padding-left: 16px !important;
+    padding-left: 20px !important;
     padding-bottom: 0 !important;
     padding-right: 0 !important;
 }
@@ -403,7 +403,7 @@
     justify-content: flex-end !important;
     align-items: flex-start !important;
     padding-bottom: 18px !important;
-    padding-left: 16px !important;
+    padding-left: 20px !important;
     padding-top: 0 !important;
     padding-right: 0 !important;
 }

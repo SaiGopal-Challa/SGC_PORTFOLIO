@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\certs\" />
+    <Folder Include="wwwroot\achievements\" />
   </ItemGroup>
 
   <ItemGroup>

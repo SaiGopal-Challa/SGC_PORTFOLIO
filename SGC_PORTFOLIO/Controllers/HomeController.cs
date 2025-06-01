@@ -23,6 +23,11 @@ namespace SGC_PORTFOLIO.Controllers
             return View();
         }
 
+        public IActionResult WorksAndCertificates()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

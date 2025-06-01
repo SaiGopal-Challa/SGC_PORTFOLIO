@@ -18,29 +18,80 @@
 
 /* Remove any margin on body to prevent gaps */
 body {
-    margin: 0; /* Ensure there's no margin on the body */
-    padding-top: 30px; /* Adjust based on your navbar height */
-    background-color: #82CBE6;
-    padding-left: 0px;
-    align-self:center;
-    /*margin-bottom: 80px;*/
+    background: #3b466b;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
 /* Blog Content Styles */
 .blog-content {
-    /*position: relative;*/
-    margin: 0 auto;
     max-width: 800px;
-    padding: 30px;
-    background-color: #f2f4f7;
-    font-family: 'Encode Sans', sans-serif;
-    text-align: center;
-    margin-bottom:20px;
-    margin-left: auto;
+    margin: 60px auto 0 auto;
+    padding: 32px 16px 24px 16px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    min-height: 60vh;
 }
-    .blog-content h1 {
-        margin-top: 30px; /* Ensure there's space above the heading */
-    }
+
+.blog-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #222;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 24px 20px 16px 20px;
+    transition: box-shadow 0.2s;
+    text-align: left;
+}
+
+.blog-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.blog-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.blog-card a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.blog-card a:hover {
+    color: #217dbb;
+    text-decoration: underline;
+}
+
+.blog-summary {
+    font-size: 1.08rem;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.blog-date {
+    font-size: 0.95rem;
+    color: #888;
+    margin-top: 8px;
+}
+
 /* Blog Entry Styles */
 .blog-entry {
     margin-bottom: 20px;
@@ -103,9 +154,20 @@ body {
 }
 
 /* Dark Mode Styles */
+.darkmode .blog-title {
+    color: #fff;
+}
 .darkmode .blog-header {
     background-color: #2d3436;
     border-bottom: 2px solid #636e72;
+}
+
+.darkmode .blog-card{
+    background-color: #fff;
+}
+
+.darkmode .blog-summary{
+    color: #222;
 }
 
 .darkmode .navbar-brand, .darkmode .nav-link {
@@ -145,7 +207,16 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .blog-content {
-        padding: 10px;
+        max-width: 98vw;
+        padding: 10px 2vw;
+    }
+
+    .blog-title {
+        font-size: 2rem;
+    }
+
+    .blog-card {
+        padding: 14px 8px 10px 8px;
     }
 
     .blog-entry h2 {
@@ -157,23 +228,4 @@ body {
     }
 }
 
-/* Ensure footer takes its natural position in the flow of the document */
-.footer {
-    position: absolute; /* Ensures it's positioned according to the document flow */
-    bottom: 0px;
-    padding: 10px 10px; /* Adjust padding to control height */
-    
-    background-color: #4A90E2; /* Background color */
-    clear: both; /* Ensure it clears any floats from above */
-    margin-top: 50px; /* Optional margin to separate from content above */
-    width: 100%;
-}
-
-    /* Center the footer content */
-    .footer .container {
-        max-width: auto; /* Set a maximum width */
-        color:black;
-        
-        /*margin: 0px auto; /* Center align the content */
-    }
 

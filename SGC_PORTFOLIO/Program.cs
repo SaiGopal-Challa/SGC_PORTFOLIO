@@ -1,7 +1,8 @@
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.AspNetCore.Rewrite;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using SGC_PORTFOLIO.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,6 +28,10 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+var rewriteOptions = new RewriteOptions()
+    .AddRewrite(@"^certs/kvpycert$", "certs/kvpycert.pdf", skipRemainingRules: true);
+app.UseRewriter(rewriteOptions);
+
 app.UseStaticFiles(new StaticFileOptions
 {
     OnPrepareResponse = ctx =>

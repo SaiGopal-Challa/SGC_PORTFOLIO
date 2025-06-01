@@ -1,0 +1,124 @@
+﻿.works-certs-section {
+    max-width: 1800px;
+    margin: 0px auto;
+    padding: 5rem 1rem 3rem 1rem;
+    width: 100vw;
+}
+
+.works-certs-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #ffe066;
+    letter-spacing: 0.04em;
+}
+
+.works-certs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.works-certs-category {
+    flex: 1 1 300px;
+    min-width: 280px;
+    max-width: 100%;
+}
+
+/* Force the third (Resume & CV) section to always start on a new row */
+.works-certs-category:nth-child(3) {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+    .works-certs-category h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+        color: #222;
+        letter-spacing: 0.03em;
+    }
+
+.works-certs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.works-certs-box {
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 1.1rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    padding: 1.2rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+    border: 1.5px solid #ffe06622;
+}
+
+    .works-certs-box:hover {
+        box-shadow: 0 4px 24px #ffe06644;
+        border-color: #ffe06688;
+    }
+
+/* Shine effect for resume box */
+.works-certs-box.shine {
+    position: relative;
+    overflow: hidden;
+}
+.works-certs-box.shine::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%; height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-20deg);
+    animation: shine-move 1s ease;
+}
+@keyframes shine-move {
+    0% { left: -75%; }
+    100% { left: 120%; }
+}
+
+.works-certs-thumb {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 0.7rem;
+    background: #222;
+    border: 1px solid #ffe06655;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.works-certs-info {
+    flex: 1;
+}
+
+.works-certs-title-sm {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffe066;
+    margin-bottom: 0.2rem;
+}
+
+.works-certs-desc {
+    font-size: 0.98rem;
+    color: #eee;
+    opacity: 0.85;
+}
+
+.darkmode .works-certs-category h2 {
+    color: #FFF;
+}
+
+@media (max-width: 900px) {
+    .works-certs-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+

@@ -20,7 +20,7 @@
                 ]
             },
             {
-                name: "C++",
+                name: "Python",
                 percentage: 15,
                 projects: [
                     { name: "CRM System", url: "#" },
@@ -58,21 +58,21 @@
                 ]
             },
             {
-                name: "SQL",
-                percentage: 30,
-                projects: [
-                    { name: "Dashboard Application", url: "#" },
-                    { name: "Analytics Platform", url: "#" }
-                ]
-            },
-            {
                 name: "SpringBoot",
                 percentage: 20,
                 projects: [
                     { name: "Dashboard Application", url: "#" },
                     { name: "Analytics Platform", url: "#" }
                 ]
-            }
+            },
+            {
+                name: "SQL",
+                percentage: 30,
+                projects: [
+                    { name: "Dashboard Application", url: "#" },
+                    { name: "Analytics Platform", url: "#" }
+                ]
+            }            
         ]
     },
     tools: {
@@ -80,19 +80,49 @@
         color: "var(--q3-color)",
         skills: [
             {
+                name: "APIs",
+                percentage: 20,
+                projects: [
+                    { name: "Message Queue System", url: "#" },
+                    { name: "Real-time Processing", url: "#" }
+                ]
+            },
+            {
+                name: "Caching",
+                percentage: 25,
+                projects: [
+                    { name: "Caching Service", url: "#" },
+                    { name: "Real-time Analytics", url: "#" }
+                ]
+            },
+            {
+                name: "Proxies",
+                percentage: 20,
+                projects: [
+                    { name: "Service Architecture", url: "#" },
+                    { name: "Distributed Systems", url: "#" }
+                ]
+            },
+            {
+                name: "Microservices",
+                percentage: 20,
+                projects: [
+                    { name: "API Security", url: "#" },
+                    { name: "Service Protection", url: "#" }
+                ]
+            }
+        ]
+    },
+    techTopics: {
+        title: "Tech Topics",
+        color: "var(--q4-color)",
+        skills: [
+            {
                 name: "PostgreSQL",
                 percentage: 30,
                 projects: [
                     { name: "Data Warehouse", url: "#" },
                     { name: "User Management System", url: "#" }
-                ]
-            },
-            {
-                name: "Redis",
-                percentage: 25,
-                projects: [
-                    { name: "Caching Service", url: "#" },
-                    { name: "Real-time Analytics", url: "#" }
                 ]
             },
             {
@@ -110,28 +140,6 @@
                     { name: "Authentication Service", url: "#" },
                     { name: "API Gateway", url: "#" }
                 ]
-            }
-        ]
-    },
-    techTopics: {
-        title: "Tech Topics",
-        color: "var(--q4-color)",
-        skills: [
-            {
-                name: "Microservices",
-                percentage: 20,
-                projects: [
-                    { name: "API Security", url: "#" },
-                    { name: "Service Protection", url: "#" }
-                ]
-            },
-            {
-                name: "APIs",
-                percentage: 20,
-                projects: [
-                    { name: "Message Queue System", url: "#" },
-                    { name: "Real-time Processing", url: "#" }
-                ]
             },
             {
                 name: "Rate Limiter",
@@ -139,14 +147,6 @@
                 projects: [
                     { name: "RESTful Services", url: "#" },
                     { name: "GraphQL Endpoints", url: "#" }
-                ]
-            },
-            {
-                name: "Proxies",
-                percentage: 20,
-                projects: [
-                    { name: "Service Architecture", url: "#" },
-                    { name: "Distributed Systems", url: "#" }
                 ]
             },
             {
