@@ -1,12 +1,1 @@
 Adding this file to note down next steps, mainly updates, addition of new features, pages and functionality. 
-
-Priority
-1. Add NewsLetter controller and service logic apis along with csv and cluster scheduler.
-2. Need to update css ( color palate, project section's padding, volunteer section's bounds )
-
-
-Points 
-
-1. Need to redirect to Blog Microservice rather than current basic text based blogs. ( Need to rethink, as the blog service is dropped)
-
-** Full modification required **

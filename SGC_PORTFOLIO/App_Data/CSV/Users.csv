@@ -1,0 +1,4 @@
+UserId,UserName,PasswordHash,Email,Phone,DateOfBirthUtc,IsUnsubscribed
+1234567890abcdef,alice,hash1,ghjgfgh@gmail.com,1234567890,1990-01-01,false
+2345678901abcdef,bob,hash2,bob@example.com,2345678901,1992-02-02,false
+3456789012abcdef,charlie,hash3,charlie@example.com,3456789012,1994-03-03,false

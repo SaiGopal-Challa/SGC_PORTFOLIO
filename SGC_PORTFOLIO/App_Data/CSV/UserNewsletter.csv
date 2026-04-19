@@ -1,0 +1,7 @@
+UserId,Email,ClusterId,AgeTag,FieldOfWork,ExperienceTag,TopicTags
+1234567890abcdef,kjhggjk@gmail.com,1,18,Engineering,Junior,AI;ML;Java;Backend;WebAssembly;GraphQL;TypeScript;Rust;Go;Swift;Flutter;React
+2345678901abcdef,bob@example.com,2,35,Marketing,Senior,Cloud;AWS;Docker;Kubernetes;Data Science;Web Development;Microservices;Security;Database;PostgreSQL;Oracle;Frontend
+3456789012abcdef,rony.hgfdghj@gmail.com,1,30,Engineering,Senior,Python;DevOps;Java;C#;AI;ML;Cloud;AWS;Docker;Kubernetes;Data Science;Web Development
+4567890123abcdef,dana@example.com,2,26,Marketing,Junior,Microservices;Security;Database;PostgreSQL;Oracle;Frontend;Backend;API;WebAssembly;GraphQL;TypeScript;Rust
+5678901234abcdef,emma@example.com,1,19,Engineering,Junior,Java;ML;AI;React;Vue;Svelte;SEO;Content;Branding;Analytics;Growth;AdTech
+6789012345abcdef,frank@example.com,2,35,Marketing,Senior,MarTech;CRM;Email;Social;Influencer;Kotlin;Scala;Elixir;Haskell;Perl;Julia;R

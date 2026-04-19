@@ -34,3 +34,7 @@
 /Backup
 /SGC_PORTFOLIO/obj/Debug/net8.0
 /SGC_PORTFOLIO/appsettings.json
+/.vs/CopilotSnapshots
+/SGC_PORTFOLIO/bin/Release/net8.0
+/SGC_PORTFOLIO/obj/Release/net8.0
+/SGC_PORTFOLIO/obj/SGC_PORTFOLIO.csproj.nuget.g.targets
