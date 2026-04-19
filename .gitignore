@@ -38,3 +38,6 @@
 /SGC_PORTFOLIO/bin/Release/net8.0
 /SGC_PORTFOLIO/obj/Release/net8.0
 /SGC_PORTFOLIO/obj/SGC_PORTFOLIO.csproj.nuget.g.targets
+
+**/obj/
+**/obj/*.nuget.g.targets
