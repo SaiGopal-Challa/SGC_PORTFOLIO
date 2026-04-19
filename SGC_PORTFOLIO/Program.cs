@@ -15,8 +15,8 @@ builder.Configuration.Sources.Clear();
 // Configure app settings
 builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-    //.AddJsonFile("appsettings.Production.json", optional: true, reloadOnChange: true) // explicit
-    //.AddJsonFile("appsettings.SecureProd.json", optional: true, reloadOnChange: true) // your custom locked file
+    //.AddJsonFile("appsettings.Production.json", optional: true, reloadOnChange: true)
+    //.AddJsonFile("appsettings.SecureProd.json", optional: true, reloadOnChange: true) 
     .AddEnvironmentVariables();
 
 // Add services to the container.
