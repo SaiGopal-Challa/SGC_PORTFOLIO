@@ -42,3 +42,4 @@
 
 **/obj/
 **/obj/*.nuget.g.targets
+/SGC_PORTFOLIO/appsettings.Production.json
